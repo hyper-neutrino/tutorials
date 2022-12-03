@@ -163,7 +163,3 @@ Finally, although this syntax is a bit weird, you can also use `?.` to safely at
 ## Conclusion
 
 In today's tutorial, we went over how to install Node.JS and then some basics with asynchronous programming, JavaScript's value types, and the list of operators. Next time, we will start writing some actual code and looking into defining variables and how to use functions.
-
-:::info
-test
-:::
