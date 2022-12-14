@@ -89,7 +89,7 @@ A common application of this is for _meta-functions_ or functions that specifica
 3 2 [ 1, 2, 3 ]
 ```
 
-So, why is it outputting like that and not just printing `1`, `2`, and then `3`? Well, it is a quirk of how `forEach` works. `forEach` will actually pass three arguments to the function within - the first is the value, the second is the index, and the third is the entire array. Since `console.log` can take any number of arguments, it accepts all three and prints them all, space-separated.
+So, why is it outputting like that and not just printing `1`, `2`, and then `3`? Well, it is a feature of `forEach` works. `forEach` will actually pass three arguments to the function within - the first is the value, the second is the index, and the third is the entire array. Since `console.log` can take any number of arguments, it accepts all three and prints them all, space-separated.
 
 This is another important feature of JavaScript. If a function requests two inputs and you only give it one, the second just becomes `undefined` and there is no error. If a function requests one input and you give it two, it will just ignore the second. This is unlike most other languages that will throw errors, so this is a place in which you need to be very careful because JavaScript might hide your mistakes and make it hard to detect them.
 
