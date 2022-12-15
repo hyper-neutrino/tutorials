@@ -11,6 +11,8 @@ var x; // creates a box called "x"
 let y; // creates a box called "y"
 ```
 
+**Quick Note:** `//` starts a line comment, which marks everything after it until the end of the line as a comment which is ignored. `/* */` defines a block comment which ignores everything between the `/*` and `*/` (you cannot nest these, so `/* /* */` is a complete comment).
+
 We'll talk about the difference between `var` and `let` later. Once we have a box, we can put items into it:
 
 ```js
@@ -50,7 +52,7 @@ Speaking from a high level, the scope is just the section of code in which a var
 // code 4
 ```
 
-Here, `code 1` and `code 4` are in the global scope, and `code 2` and `code 3` are in separate block scopes. We'll discuss functions in more depth later on but all you need to know for now is that `function func_name() { ... }` defines a function:
+Here, `code 1` and `code 4` are in the global scope, and `code 2` and `code 3` are in separate block scopes. We'll discuss functions in more depth later on but all you need to know for now is that `function func_name() { ... }` defines a function (recall that it is essentially an input-output box defined as a sequence of computations/steps):
 
 ```js
 // code 1
@@ -155,6 +157,23 @@ As does this:
 ```
 
 This way, if you try using a variable before it exists, you get a very clear error.
+
+## Redeclaration
+
+A final crucial difference is that `let` (and `const`) will error if you attempt to redeclare the variable. `var x = 1; var x = 2;` will work and set `x` to `2`, but `var x; let x;`, `let x; var x;`, and `let x; let x;` will all error. `var x = 1; const x = 1;` will also error, and trying to redeclare or redefine a `const` after initialization will always error.
+
+Using `let` is useful here so that if you forget you were already using a variable name and redefine it within the same scope, you get an error instead of it being silently ignored. Note that you can redeclare a variable in a narrower scope without error and it will just create a new variable:
+
+```js
+function f() {
+    let x = 2;
+    {
+        let x = 3;
+        console.log(x); // 3
+    }
+    console.log(x); // 2
+}
+```
 
 ---
 
