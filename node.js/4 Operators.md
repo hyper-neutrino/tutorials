@@ -170,4 +170,4 @@ console.log(x--); // 1; x is now 0
 
 ---
 
-This lesson only went over operators, but this is an extremely crucial subject to be familiar with. It's okay if you're a bit confused on how bitwise operators work, but over time you should become more familiar with them, and you should revisit this page as needed or to refresh your knowledge. The next lesson will be shorter, and will just cover custom objects (not classes yet, those are a bit more advanced and we will go over those later).
+This lesson only went over operators, but this is an extremely crucial subject to be familiar with. It's okay if you're a bit confused on how bitwise operators work, but over time you should become more familiar with them, and you should revisit this page as needed or to refresh your knowledge. The next lesson will cover how to define functions, as that is a crucial precursor to some other concepts.
